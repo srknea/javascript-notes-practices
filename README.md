@@ -25,12 +25,7 @@ console.log("c değeri: "+c);
 function selamVer(){
     console.log("merhaba");
 }
-```
-
-```jsx
-/*
-Merhaba
-*/
+//Merhaba
 ```
 
 ---
@@ -41,12 +36,7 @@ const selamVerDegiskeni = function () {
 }
 
 selamVerDegiskeni();
-```
-
-```jsx
-/*
-Merhaba
-*/
+//Merhaba
 ```
 
 ---
@@ -59,12 +49,7 @@ const selamVerDegiskeni => () {
 }
 
 selamVerDegiskeni();
-```
-
-```jsx
-/*
-Merhaba
-*/
+//Merhaba
 ```
 
 ```jsx
@@ -74,12 +59,7 @@ const selamVerDegiskeni _ => {
 }
 
 selamVerDegiskeni();
-```
-
-```jsx
-/*
-Merhaba
-*/
+//Merhaba
 ```
 
 ```jsx
@@ -88,12 +68,7 @@ const fatArrowParametreli = (sayi) => {
 };
 
 console.log(fatArrowParametreli(8));
-```
-
-```jsx
-/*
-64
-*/
+//64
 ```
 
 ```jsx
@@ -102,12 +77,7 @@ const fatArrowParametreliKisa = sayi => {
     return sayi * sayi;
 }
 console.log(fatArrowParametreliKisa(8));
-```
-
-```jsx
-/*
-64
-*/
+//64
 ```
 
 ```jsx
@@ -115,12 +85,7 @@ console.log(fatArrowParametreliKisa(8));
 const fatArrowParametreliKisa = sayi => sayi * sayi;
 
 console.log(fatArrowParametreliKisa(8));
-```
-
-```jsx
-/*
-64
-*/
+//64
 ```
 
 ```jsx
@@ -132,9 +97,6 @@ const sayilariTopla2 = (s1, s2) => {
     return s1 + s2;
 }
 console.log(sayilariTopla2(5,10));
-```
-
-```jsx
 /*
 15
 15
@@ -295,3 +257,88 @@ console.log(citrus.toString());
 ```
 
 ![Untitled](Notes/Untitled%2010.png)
+
+### Object
+
+```jsx
+let person = {
+    firstName: 'Serkan',
+    lastName: 'ISIK',
+    yearOfBirth: 1998,
+    married: false,
+    favoriteColors: ['Black', 'White', "Grey"],
+    calculateAge: function () {
+        this.age = 2022 - this.yearOfBirth;
+    }
+};
+
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person.yearOfBirth);
+console.log(person.married);
+console.log(person.favoriteColors);
+
+person.calculateAge(); 
+console.log(person.age); //you have to call the function first
+```
+
+![Untitled](Notes/Untitled%2011.png)
+
+```jsx
+let person = {
+    firstName: 'Serkan',
+    lastName: 'ISIK',
+    yearOfBirth: 1998,
+    married: false,
+    favoriteColors: ['Black', 'White', "Grey"],
+};
+
+console.log(person['firstName']);
+console.log(person['lastName']);
+console.log(person['yearOfBirth']);
+console.log(person['married']);
+console.log(person['favoriteColors']);
+```
+
+![Untitled](Notes/Untitled%2012.png)
+
+```jsx
+let person = {
+    firstName: 'Serkan',
+    lastName: 'ISIK',
+    yearOfBirth: 1998,
+    married: false,
+    favoriteColors: ['Black', 'White', "Grey"],
+};
+
+let person2 = {
+    firstName: 'Esmanur',
+    lastName: 'MAZLUM',
+    yearOfBirth: 2000,
+    married: false,
+    favoriteColors: ['Black', 'Green', "Blue"],
+};
+
+//Array
+let people = [person, person2];
+
+console.log(people);
+console.log(people[0].firstName);
+console.log(people[1].firstName);
+```
+
+![Untitled](Notes/Untitled%2013.png)
+
+```jsx
+let person = new Object();
+
+person.firstName = "Serkan";
+person.lastName = "ISIK"
+person.yearOfBirth = 1998;
+
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person.yearOfBirth);
+```
+
+![Untitled](Notes/Untitled%2014.png)
