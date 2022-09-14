@@ -345,3 +345,58 @@ console.log(person.yearOfBirth);
 ```
 
 ![Untitled](Notes/Untitled%2014.png)
+
+### Referans Tipler Çalışma Mantığı
+
+```jsx
+//primitive
+
+let age = 23;
+let newAge = age;
+
+console.log(age,newAge);
+
+age = 24;
+console.log(age,newAge);
+```
+
+![Untitled](Notes/Untitled%2015.png)
+
+---
+
+```jsx
+//referans tipli 
+//array
+let colors = ["Black", "White"];
+let newColors = colors;
+
+console.log(colors, newColors);
+
+colors.push("Grey");
+
+console.log(colors, newColors);
+```
+
+![Untitled](Notes/Untitled%2016.png)
+
+![Untitled](Notes/Untitled%2017.png)
+
+```jsx
+//referans tipli 
+//object
+let person = {
+    studentName: "Serkan",
+    age: 23
+}
+
+let newPerson = person;
+
+console.log(person, newPerson);
+
+person.age = 24;
+console.log(person, newPerson);
+```
+
+![Untitled](Notes/Untitled%2018.png)
+
+---
