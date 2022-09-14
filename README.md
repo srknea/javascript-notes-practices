@@ -9,57 +9,60 @@ if (a>b){
 else{
     c = a - b;
 }
-console.log("c değeri: "+c);
+console.log("The value of c is: "+c);
 ```
 
 ```jsx
 let a = 10, b = 5, c = 0;
 
 c = (a > b) ? (a + b) : (a - b);
-console.log("c değeri: "+c);
+console.log("The value of c is: "+c);
 ```
 
 ---
 
 ```jsx
-function selamVer(){
-    console.log("merhaba");
+function sayHello(){
+    console.log("Hello");
 }
-//Merhaba
+
+sayHello();
+//Hello
 ```
 
 ---
 
 ```jsx
-const selamVerDegiskeni = function () {
-	console.log("Merhaba")
+const myVariable = function () {
+    return 2022-1998; 
 }
 
-selamVerDegiskeni();
-//Merhaba
+let x = myVariable();
+console.log(x);
+//24
 ```
 
 ---
 
-### Fat Arrow
+### ES6 - Fat Arrow
 
 ```jsx
-const selamVerDegiskeni => () {
-	console.log("Merhaba")
+const sayHello = () =>  {
+    console.log("Hello");
 }
 
-selamVerDegiskeni();
-//Merhaba
+sayHello();
+//Hello
 ```
 
 ```jsx
-/* Parametresiz */
-const selamVerDegiskeni _ => {
-	console.log("Merhaba")
+/*Fat arrow, without parameters*/
+const sayHello = _ => {
+    console.log("Hello");
 }
 
-selamVerDegiskeni();
-//Merhaba
+sayHello();
+//Hello
 ```
 
 ```jsx
