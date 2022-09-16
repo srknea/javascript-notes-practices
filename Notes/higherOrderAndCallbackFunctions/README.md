@@ -46,8 +46,6 @@ subtract(myArray);
 
 ![Untitled](Untitled.png)
 
----
-
 ```jsx
 let myArray = [1, 2, 3];
 
@@ -98,3 +96,93 @@ Callback fonksiyonları, bir başka fonksiyon içerisinde çağırılan ve
 ![Untitled](Untitled%201.png)
 
 ---
+
+```jsx
+//higher order function 
+function add (firstValue, secondValue, callBack){
+    const temp = firstValue + secondValue;
+    callBack(temp);
+}
+
+//callback function
+function result (value) {
+    console.log(value);
+}
+
+add(7,3,result);
+//10
+```
+
+```jsx
+function add (firstValue, secondValue, callBack){
+    const temp = firstValue + secondValue;
+    callBack(temp);
+}
+
+add(7,3,function result (value) {
+    console.log(value);
+});
+//10
+```
+
+```jsx
+function add (firstValue, secondValue, callBack){
+    const temp = firstValue + secondValue;
+    callBack(temp);
+}
+
+add(7,3,function (value) {
+    console.log(value);
+});
+//10
+```
+
+---
+
+### forEach
+
+```jsx
+//higher order function: forEach
+//callback function: myFunction
+let myArray = [1,10,100,1000,10000];
+
+myArray.forEach(function (value, index){
+    console.log(value,index);
+});
+```
+
+![Untitled](Untitled%202.png)
+
+```jsx
+
+let myArray = [1,10,100,1000,10000];
+
+myArray.forEach(myFunction);
+
+function myFunction (value, index) {
+    console.log(value,index);
+}
+```
+
+![Untitled](Untitled%203.png)
+
+---
+
+```jsx
+//kendi forEach fonksiyonumuzu yazalım
+let myArray = [1,10,100,1000,10000];
+
+function print (value,index){
+    console.log(value, index);
+}
+
+function myFunction (array, callBack){
+    for (let i=0; i < array.length; i++){
+        callBack(array[i],i);
+    }
+}
+
+myFunction(myArray,print);
+```
+
+![Untitled](Untitled%204.png)
