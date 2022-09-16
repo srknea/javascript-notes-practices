@@ -346,4 +346,6 @@ console.log(person.yearOfBirth);
 
 ![Untitled](Notes/Untitled%2014.png)
 
-[Referans Tipler Çalışma Mantığı](Notes/README.md)
+[Referans Tipler Çalışma Mantığı](Notes/referansTiplerÇalışmaMantığı/README.md)
+
+[Higher Order and Callback Functions](Notes/higherOrderAndCallbackFunctions/README.md)
