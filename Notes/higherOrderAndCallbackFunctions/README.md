@@ -139,7 +139,9 @@ add(7,3,function (value) {
 
 ---
 
-### forEach
+
+<details>
+  <summary>forEach</summary>
 
 ```jsx
 //higher order function: forEach
@@ -188,8 +190,11 @@ myFunction(myArray,print);
 ![Untitled](Untitled%204.png)
 
 ---
+</details>
 
-### map
+
+<details>
+  <summary>map</summary>
 
 ```jsx
 const myArray = [1,2,3];
@@ -260,3 +265,103 @@ console.log(newArray);
 ```
 
 ![Untitled](Untitled%207.png)
+</details>
+
+
+
+<details>
+  <summary>filter</summary>
+  
+```jsx
+//without filter
+const myArray = [
+    {dataName: "Banana", type: "Fruit"},
+    {dataName: "Orange", type: "Fruit"},
+    {dataName: "Onion", type: "Vegetable"},
+    {dataName: "Watermelon", type: "Fruit"},
+    {dataName: "Garlic", type: "Vegetable"},
+    {dataName: "Eggplant", type: "Vegetable"},
+    {dataName: "Strawberry", type: "Fruit"},
+    {dataName: "Leek", type: "Vegetable"},
+];
+
+function findFruits(array){
+    const tempArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if(array[i].type === "Fruit"){
+            tempArray.push(array[i].dataName);
+        }
+    }
+    return tempArray;
+}
+
+function findVegetables(array){
+    const tempArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if(array[i].type === "Vegetable"){
+            tempArray.push(array[i].dataName);
+        }
+    }
+    return tempArray;
+}
+
+console.log(findFruits(myArray));
+console.log(findVegetables(myArray));
+```
+
+![Untitled](Untitled%208.png)
+
+```jsx
+const myArray = [
+    {dataName: "Banana", type: "Fruit"},
+    {dataName: "Orange", type: "Fruit"},
+    {dataName: "Onion", type: "Vegetable"},
+    {dataName: "Watermelon", type: "Fruit"},
+    {dataName: "Garlic", type: "Vegetable"},
+    {dataName: "Eggplant", type: "Vegetable"},
+    {dataName: "Strawberry", type: "Fruit"},
+    {dataName: "Leek", type: "Vegetable"},
+];
+
+const newArray = myArray.filter(function (array){
+    return array.type === "Fruit" //returns true or false
+});
+
+console.log(newArray);
+```
+
+![Untitled](Untitled%209.png)
+
+```jsx
+//kendi filter fonksiyonumuzu yazalım
+const myArray = [
+    {dataName: "Banana", type: "Fruit"},
+    {dataName: "Orange", type: "Fruit"},
+    {dataName: "Onion", type: "Vegetable"},
+    {dataName: "Watermelon", type: "Fruit"},
+    {dataName: "Garlic", type: "Vegetable"},
+    {dataName: "Eggplant", type: "Vegetable"},
+    {dataName: "Strawberry", type: "Fruit"},
+    {dataName: "Leek", type: "Vegetable"},
+];
+
+function myFilter (array, callBack){
+    const tempArray = [];
+    for (let i = 0; i < array.length; i++) {
+        const result = callBack(array[i]);   
+        if(result){
+            tempArray.push(array[i]);
+        }
+    }
+    return tempArray;
+}
+
+const fruits = myFilter(myArray,function (value) {
+    return value.type === "Fruit"; //returns true or false
+});
+
+console.log(fruits);
+```
+
+![Untitled](Untitled%2010.png)
+</details>
