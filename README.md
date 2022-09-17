@@ -21,6 +21,9 @@ console.log("The value of c is: "+c);
 
 ---
 
+<details>
+  <summary>Function</summary>
+
 ```jsx
 function sayHello(){
     console.log("Hello");
@@ -105,8 +108,10 @@ console.log(sayilariTopla2(5,10));
 15
 */
 ```
+</details>
 
-### Array
+<details>
+  <summary>Array</summary>
 
 ```jsx
 let arabaMarkalari = ["Mercedes", "Audi", "BMW"];
@@ -142,8 +147,10 @@ for (let anlıkDiziElemani of arabaMarkalari) {
 ```jsx
 let myArray = [1, "emre", true];
 ```
+</details>
 
-### Array Function
+<details>
+  <summary>Array Function</summary>
 
 ```jsx
 let isimler = ["emre", "hasan", "ayşe"];
@@ -261,7 +268,11 @@ console.log(citrus.toString());
 
 ![Untitled](Notes/Untitled%2010.png)
 
-### Object
+
+</details>
+
+<details>
+  <summary>Object</summary>
 
 ```jsx
 let person = {
@@ -345,6 +356,8 @@ console.log(person.yearOfBirth);
 ```
 
 ![Untitled](Notes/Untitled%2014.png)
+</details>
+
 
 [Referans Tipler Çalışma Mantığı](Notes/referansTiplerÇalışmaMantığı/README.md)
 
