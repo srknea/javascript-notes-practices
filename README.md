@@ -1,26 +1,3 @@
-### Ternary If
-
-```jsx
-let a = 10, b = 5, c = 0;
-
-if (a>b){
-    c = a + b;
-}
-else{
-    c = a - b;
-}
-console.log("The value of c is: "+c);
-```
-
-```jsx
-let a = 10, b = 5, c = 0;
-
-c = (a > b) ? (a + b) : (a - b);
-console.log("The value of c is: "+c);
-```
-
----
-
 <details>
   <summary>Function</summary>
 
@@ -362,3 +339,5 @@ console.log(person.yearOfBirth);
 [Referans Tipler Çalışma Mantığı](Notes/referansTiplerÇalışmaMantığı/README.md)
 
 [Higher Order and Callback Functions](Notes/higherOrderAndCallbackFunctions/README.md)
+
+[Others](Notes/others/README.md)

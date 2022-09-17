@@ -186,3 +186,77 @@ myFunction(myArray,print);
 ```
 
 ![Untitled](Untitled%204.png)
+
+---
+
+### map
+
+```jsx
+const myArray = [1,2,3];
+
+/*map, kullanıldığı dizinin  her bir elemanı döndüren 
+bir callback fonksiyona sahiptir*/
+const newArray = myArray.map(function (value) {
+    return value * 2; //return is mandatory
+		//value: dizinin mevcut indisindeki değeri temsil eder    
+});
+
+console.log(myArray);
+console.log(newArray);
+console.log(myArray);
+```
+
+![Untitled](Untitled%205.png)
+
+```jsx
+const myArray=[
+    { firstName: 'Serkan', age: 23 },
+    { firstName: 'Mehmet', age: 21 },
+    { firstName: 'Gürkan', age: 22 },
+];
+
+const newArray = myArray.map(function (value){
+    return value.age;
+});
+   
+console.log(newArray);
+```
+
+![Untitled](Untitled%206.png)
+
+```jsx
+const myArray=[
+    { firstName: 'Serkan', age: 23 },
+    { firstName: 'Mehmet', age: 21 },
+    { firstName: 'Gürkan', age: 22 },
+];
+
+const newArray = myArray.map((value) => value.age);
+   
+console.log(newArray);
+```
+
+![Untitled](Untitled%206.png)
+
+```jsx
+//kendi map fonksiyonumuzu yazalım
+const myArray = [1, 2, 3, 4, 5];
+
+console.log(myArray);
+
+function myMap (array, callBack) {
+    const tempArray = [];
+    for (let i = 0; i < array.length; i++) {
+        tempArray.push(callBack(array[i]))     
+    }
+    return tempArray;
+}
+
+const newArray = myMap(myArray, function myCallBack(value){
+    return value * 2;
+});
+
+console.log(newArray);
+```
+
+![Untitled](Untitled%207.png)
