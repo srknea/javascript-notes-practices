@@ -139,9 +139,7 @@ add(7,3,function (value) {
 
 ---
 
-
-<details>
-  <summary>forEach</summary>
+### forEach
 
 ```jsx
 //higher order function: forEach
@@ -190,11 +188,8 @@ myFunction(myArray,print);
 ![Untitled](Untitled%204.png)
 
 ---
-</details>
 
-
-<details>
-  <summary>map</summary>
+### map
 
 ```jsx
 const myArray = [1,2,3];
@@ -265,15 +260,11 @@ console.log(newArray);
 ```
 
 ![Untitled](Untitled%207.png)
-</details>
 
+### filter
 
-
-<details>
-  <summary>filter</summary>
-  
 ```jsx
-//without filter
+//without filter 
 const myArray = [
     {dataName: "Banana", type: "Fruit"},
     {dataName: "Orange", type: "Fruit"},
@@ -285,7 +276,7 @@ const myArray = [
     {dataName: "Leek", type: "Vegetable"},
 ];
 
-function findFruits(array){
+function filterFruits(array){
     const tempArray = [];
     for (let i = 0; i < array.length; i++) {
         if(array[i].type === "Fruit"){
@@ -295,7 +286,7 @@ function findFruits(array){
     return tempArray;
 }
 
-function findVegetables(array){
+function filterVegetables(array){
     const tempArray = [];
     for (let i = 0; i < array.length; i++) {
         if(array[i].type === "Vegetable"){
@@ -305,8 +296,8 @@ function findVegetables(array){
     return tempArray;
 }
 
-console.log(findFruits(myArray));
-console.log(findVegetables(myArray));
+console.log(filterFruits(myArray));
+console.log(filterVegetables(myArray));
 ```
 
 ![Untitled](Untitled%208.png)
@@ -364,4 +355,120 @@ console.log(fruits);
 ```
 
 ![Untitled](Untitled%2010.png)
-</details>
+
+### find
+
+```jsx
+//without find
+const myArray = [
+    {id: 8156213541, dataName: "Durdu"},
+    {id: 6156213546, dataName: "Emine"},
+    {id: 5156213545, dataName: "Hakan"},
+    {id: 6156213541, dataName: "Nurcan"},
+    {id: 1156213545, dataName: "Ayşegül"},
+    {id: 4156913546, dataName: "Serkan"},
+];
+
+function findId(array){
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].id === 4156913546) {
+            return array[i];
+        }       
+    }
+}
+
+console.log(findId(myArray));
+```
+
+![Untitled](Untitled%2011.png)
+
+```jsx
+const myArray = [
+    {id: 8156213541, dataName: "Durdu"},
+    {id: 6156213546, dataName: "Emine"},
+    {id: 5156213545, dataName: "Hakan"},
+    {id: 6156213541, dataName: "Nurcan"},
+    {id: 1156213545, dataName: "Ayşegül"},
+    {id: 4156913546, dataName: "Serkan"},
+];
+
+const result = myArray.find(function (value) {
+    return value.id === 4156913546; //returns true or false
+});
+
+console.log(result);
+```
+
+![Untitled](Untitled%2011.png)
+
+```jsx
+//kendi find fonksiyonumuzu yazalım
+const myArray = [
+    {id: 8156213541, dataName: "Durdu"},
+    {id: 6156213546, dataName: "Emine"},
+    {id: 5156213545, dataName: "Hakan"},
+    {id: 6156213541, dataName: "Nurcan"},
+    {id: 1156213545, dataName: "Ayşegül"},
+    {id: 4156913546, dataName: "Serkan"},
+];
+
+function myFind (array, callBack){
+    let temp = undefined;
+    for (let i = 0; i < array.length; i++) {
+        if (callBack(array[i])) {
+            temp = array[i];
+            return temp;
+        }
+    }
+    return temp;
+}
+
+const result = myFind(myArray,function (value) {
+    return value.id === 4156913546; //returns true or false
+});
+
+console.log(result);
+```
+
+![Untitled](Untitled%2011.png)
+
+### every
+
+```jsx
+const myArray = [1, 2, 3];
+
+const result = myArray.every(function (value){
+    return value < 5;
+})
+
+console.log(result);
+//true
+
+//Bütün elemanlar 5'den küçük mü onu kontrol etti
+```
+
+```jsx
+const myArray = [1, 2, 3, 4, 5, 6, 7];
+
+const result = myArray.every(function (value){
+    return value < 5;
+})
+
+console.log(result);
+//false
+```
+
+### some
+
+```jsx
+const myArray = [1, 2, 3, 4, 5, 6, 7];
+
+const result = myArray.some(function (value){
+    return value < 5;
+})
+
+console.log(result);
+//true
+
+//Şartı sağlayan tek bir eleman olsa dahi true döner
+```
