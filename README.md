@@ -340,4 +340,6 @@ console.log(person.yearOfBirth);
 
 [Higher Order and Callback Functions](Notes/higherOrderAndCallbackFunctions/README.md)
 
+[Array Helper Functions](Notes/arrayHelperFunctions/README.md)
+
 [Others](Notes/others/README.md)
