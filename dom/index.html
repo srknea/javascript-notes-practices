@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>DOM Kavramı</h1>
-    <h2>Document Object Model</h2>
-    <p>Browser tarafından oluşturulan node/elementlerin ağacıdır.</p>
-    <p>JS ile DOM yapısındaki elemanlar okunabilir, değiştirilebilir
+    <h1 id="baslik" class="baslikSinif">DOM Kavramı</h1>
+    <h2 id="kucukBaslik">Document Object Model</h2>
+    <p id="ilkParagraf">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p id="ikinciParagraf">JS ile DOM yapısındaki elemanlar okunabilir, değiştirilebilir
     veya sıfırdan oluşturulabilir.</p>
     
     <form id="formID" action="www.emrealtunbilek.com">
@@ -21,8 +21,15 @@
     <a class="link link-facebook" href="https://tr-tr.facebook.com/">Facebook</a> <br>
     <a class="link link-instagram" href="https://www.instagram.com/">Instagram</a> <br>
 
-    <img src="https://source.unsplash.com/400x300" alt="">
+    <img id="img" src="https://source.unsplash.com/400x300" alt="">
     
-    <script src="app.js"></script>
+    <ul id="liste" class="liste">
+        <li class="liste-item">Ankara</li>
+        <li class="liste-item">Adana</li>
+        <li class="liste-item">Kilis</li>
+        <li class="liste-item">Karabük</li>
+    </ul>
+
+    <script src="querySelector.js"></script>
 </body>
 </html>
