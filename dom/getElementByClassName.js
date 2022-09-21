@@ -1,4 +1,4 @@
-//Tek element seçici
+//Çoklu element seçici
 
 const links = document.getElementsByClassName('link');
 console.log(links);
