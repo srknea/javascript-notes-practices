@@ -10,6 +10,7 @@ links[2].textContent = 'İnstagram için tıkla !';
 
 console.log("---------------------");
 
+//Diziye çevirmemiz gereklidir !
 const myArray = Array.from(links);
 myArray.reverse();
 myArray.forEach(item => {
