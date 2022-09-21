@@ -1,4 +1,4 @@
-//Tek element seçiciler
+//Tek element seçici
 
 console.log(document.getElementById('baslik'));
 
