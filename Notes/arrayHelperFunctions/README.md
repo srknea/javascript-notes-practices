@@ -405,3 +405,59 @@ console.log(yeniDiziWithReduce);
 ```
 
 ![Untitled](Untitled%2018.png)
+
+### reduce and filter
+
+```jsx
+const myArray = [1, 10, 100, 1000, 10000];
+
+console.log(myArray);
+
+const newArrayWithFilter = myArray.filter(function (value){
+    return value < 500 ; //returns true or false
+});
+
+console.log(newArrayWithFilter);
+
+const newArrayWithReduce = myArray.reduce(function (pre, crr){
+    if(crr < 500){
+      pre.push(crr);  
+    }
+    return pre;
+}, []);
+
+console.log(newArrayWithReduce);
+```
+
+![Untitled](Untitled%2019.png)
+
+```jsx
+const myArray = [
+    {id: 8156213541, dataName: "Durdu"},
+    {id: 6156213546, dataName: "Emine"},
+    {id: 5156213545, dataName: "Hakan"},
+    {id: 6156213541, dataName: "Nurcan"},
+    {id: 1156213545, dataName: "Ayşegül"},
+    {id: 4156913546, dataName: "Serkan"},
+];
+
+console.log(myArray);
+
+const resultWithFind = myArray.find(function (value){
+    return value.id === 4156913546 ; //returns true or false
+});
+
+console.log(resultWithFind);
+
+const resultWithReduce = myArray.reduce(function (pre, crr){
+    if (crr.id === 4156913546) {
+        return crr;
+    } else {
+        return pre;
+    }
+}, undefined);
+
+console.log(resultWithReduce);
+```
+
+![Untitled](Untitled%2020.png)

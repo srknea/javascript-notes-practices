@@ -1,4 +1,4 @@
-//Tek element seçici
+/*Tek element seçici*/
 
 console.log(document.querySelector('p'));
 //console.log(document.querySelector('#img'));
@@ -15,6 +15,8 @@ document.querySelector('li:nth-child(even)').style.color = 'blue'
 document.querySelector('li:nth-child(odd)').style.color = 'red'
 
 console.log("*********************");
+/*Elemanlar arasında gezinti*/
+
 
 const myOl = document.querySelector('ol.siraliListe');
 console.log(myOl);
