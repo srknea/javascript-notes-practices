@@ -4,7 +4,7 @@ console.log(document.querySelector('p'));
 //console.log(document.querySelector('#img'));
 
 console.log(document.querySelector('.liste-item'));
-console.log(document.querySelector('ul li'));
+console.log(document.querySelector('ul li')); // Sayfadaki ilk ul'nin ilk li 'sini seçer
 console.log(document.querySelector('.link.link-google'));
 
 

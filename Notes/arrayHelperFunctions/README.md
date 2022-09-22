@@ -520,7 +520,7 @@ birinci indis ikinci indisten büyüktür demektir.
 İndisler yer değiştirirler....
 
 Sıfır dönerse eşitlerdir yine değişme olmaz..
-/*
+*/
 ```
 
 ```jsx
