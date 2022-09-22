@@ -431,6 +431,8 @@ console.log(newArrayWithReduce);
 
 ![Untitled](Untitled%2019.png)
 
+### reduce and find
+
 ```jsx
 const myArray = [
     {id: 8156213541, dataName: "Durdu"},
@@ -461,3 +463,83 @@ console.log(resultWithReduce);
 ```
 
 ![Untitled](Untitled%2020.png)
+
+---
+
+# Other Array Functions
+
+<aside>
+
+📌 Dikkat ! Asıl dizinin de içeriği değişir.
+
+</aside>
+
+```jsx
+const arrayName = ['Hakan','Ayşe','Ebrar', 'Mustafa'];
+console.log(arrayName);
+
+console.log("---------------------");
+
+//diziyi a-z'ye sıralama
+const azArrayName = arrayName.sort();
+console.log(azArrayName);
+console.log(arrayName); 
+
+console.log("---------------------");
+
+//diziyi z-a'ya sıralama
+const zaArrayName = azArrayName.reverse(); // Z-A'ya olması için dizinin önceden sıralanmış olması gerekir
+console.log(zaArrayName);
+console.log(arrayName);
+```
+
+![Untitled](Untitled%2021.png)
+
+---
+
+![Untitled](Untitled%2022.png)
+
+```jsx
+/*
+sort fonksiyonunu sayıları sıralamak için kullandığımızda:
+sort fonksiyonu içinde a ve b parametreleri olan ve a-b
+döndürenbir fonksiyon tanımlamalıyız.
+
+Bu çözüm sort fonksiyonuna aittir.
+Ayrıca yaptığımız bir şey değildir.
+
+sort fonksiyonu 0. indisten başlayarak bulunduğu indisden sıradaki
+indisi çıkartarak karşılaştırma yapar ve elemanları sıralar...
+
+Oluşturduğumuz fonksiyon'un return değeri yani a-b negatif dönerse
+birinci indis ikinci indisten küçüktür demektir. 
+Değişme olmaz...
+
+Oluşturduğumuz fonksiyon'un return değeri yani a-b pozitif dönerse
+birinci indis ikinci indisten büyüktür demektir. 
+İndisler yer değiştirirler....
+
+Sıfır dönerse eşitlerdir yine değişme olmaz..
+/*
+```
+
+```jsx
+const arrayNumber = [4,32,12,63,21,110,89];
+console.log(arrayNumber);
+
+console.log("---------------------");
+
+//küçükten büyüge sıralama
+const newArray = arrayNumber.sort((a,b) => a-b);
+console.log(newArray);
+console.log(arrayNumber);
+
+console.log("---------------------");
+
+//büyükten küçüğe sıralama
+const newArray2 = arrayNumber.sort((a,b) => b-a);
+console.log(newArray);
+console.log(arrayNumber);
+```
+
+![Untitled](Untitled%2023.png)
