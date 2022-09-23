@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+          
+        .containers {
+            display: flex;
+            flex-direction: row; /* default*/
+            justify-content: flex-start; /* default*/
+            align-items: stretch; /* default*/   
+            flex-wrap: wrap;    
+        }
+
+        .container {
+            width: 180px;
+            height: 300px;
+            background-color: aqua;
+            padding: 2rem 2rem;
+            margin: 5px;
+        }
+
+        .otherContainer {
+            width: 180px;
+            height: 50px;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="containers">
+            
+        <div class="container">
+
+            <button id="firstButton" class="button">Click here !</button> <br><br>
+            <button id="secondButton" class="button">Click here !</button> <br><br>
+            <button id="thirdButton" class="button">Click here !</button> <br><br>
+            
+            <a id="link" href="https://www.google.com/" target="_blank">Google'a git !</a> <br><br>
+            
+            <button id="fourthButton" class="button">Double click here !</button> <br><br>
+            <button id="fifthButton" class="button">Mouse down and Mouse up</button> <br><br>
+            
+            <a id="secondLink" href="https://www.google.com/" target="_blank">Google'a git !</a> <br><br>
+        </div>
+
+        <br>
+
+        <div id="secondContainer" class="container">
+
+            <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, inventore.</p>
+        
+        </div>
+
+        <br>
+        
+        <div id="thirdContainer" class="container">
+
+            <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, inventore.</p>
+        
+        </div>
+
+        <br>
+
+        <div id="fourthContainer" class="container">
+            <p id="koordinat" class="paragraf">Koordinat</p>
+        </div>
+
+        <div id="fifthContainer" class="container">
+            
+        </div>
+
+        <div id="sixthContainer" class="container">
+            <p id="digerKoordinat" class="paragraf">Koordinat</p>
+            <p id="rgb" class="paragraf">RGB</p>
+        </div>
+        
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
