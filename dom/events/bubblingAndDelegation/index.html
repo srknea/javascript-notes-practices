@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            padding: 50px;
+        }
+    
+        #parentDiv{
+            background-color: red;
+            padding: 50px;
+            height: 70vh;   
+        }
+
+        #childDiv{
+            background-color: white;
+            height: 50vh; 
+            padding: 50px;  
+        }
+
+        #olList{
+            background-color: aqua;
+            padding: 50px;  
+        }
+
+        li{
+            background-color: brown;
+            font-size: 1.5rem;
+        }
+
+    </style>
+</head>
+<body>
+        <div id="parentDiv" class="parent">
+            <div id="childDiv">
+
+                <ol id="olList">
+                    <li id="firstItem" class="item olItem">İstanbul</li>
+                    <li id="secondItem" class="item olItem">Ankara</li>
+                    <li id="thirdItem" class="item olItem">Bursa</li>
+                </ol>
+
+            </div>
+        </div>
+        <script src="delegation.js"></script>
+</body>
+</html>
