@@ -1,14 +1,14 @@
 const myOl = document.querySelector('#myOl');
 const myArray = JSON.parse(localStorage.getItem('adListesi'));
 
-myArray.forEach(value => {
-    const newLi = document.createElement('li');
-    newLi.textContent = value;
-
-    myOl.appendChild(newLi);
-});
-
-
+if (myArray != null) {
+    myArray.forEach(value => {
+        const newLi = document.createElement('li');
+        newLi.textContent = value;
+    
+        myOl.appendChild(newLi);
+    });    
+}
 
 document.querySelector('#form').addEventListener('submit', function (e) {
     const yeniAd = document.querySelector('.isim').value;
