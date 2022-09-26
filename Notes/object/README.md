@@ -242,6 +242,7 @@ const serkan = new Ogrenci('Serkan','ISIK',23);
 ---
 
 <aside>
+
 📌 Javascript 'deki tüm objeler onu oluşturan constructor fonksiyonun tanımına
 erişebilir.
 
@@ -265,6 +266,7 @@ console.log(serkan.constructor);
 ![Untitled](Untitled%2012.png)
 
 <aside>
+
 📌 Array ve Fuction ‘lar da birer object ’dir. Onlar da kurucu constructor ‘larına erişebilirler.
 
 </aside>

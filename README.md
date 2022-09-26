@@ -103,7 +103,7 @@ console.log(arabaMarkalari.toString());
 console.log(arabaMarkalari.length);
 ```
 
-![Untitled](Notes/Untitled.png)
+![Untitled](Notes/img/Untitled.png)
 
 ```jsx
 let arabaMarkalari = ["Mercedes", "Audi", "BMW"];
@@ -119,7 +119,7 @@ for (let anlıkDiziElemani of arabaMarkalari) {
 }
 ```
 
-![Untitled](Notes/Untitled%201.png)
+![Untitled](Notes/img/Untitled%201.png)
 
 ```jsx
 let myArray = [1, "emre", true];
@@ -135,7 +135,7 @@ console.log(isimler.toString());
 console.log(isimler.join(".&."));
 ```
 
-![Untitled](Notes/Untitled%202.png)
+![Untitled](Notes/img/Untitled%202.png)
 
 ```jsx
 let isimler = ["emre", "hasan", "ayşe"];
@@ -152,7 +152,7 @@ console.log(isimler.toString());
 console.log(dizidenCikarilanEleman);
 ```
 
-![Untitled](Notes/Untitled%203.png)
+![Untitled](Notes/img/Untitled%203.png)
 
 ```jsx
 let isimler = ["emre", "hasan", "ayşe"];
@@ -169,7 +169,7 @@ console.log(isimler.toString());
 console.log(y);
 ```
 
-![Untitled](Notes/Untitled%204.png)
+![Untitled](Notes/img/Untitled%204.png)
 
 ```jsx
 let isimler = ["emre", "hasan", "ayşe"];
@@ -183,7 +183,7 @@ console.log(isimler[1]);
 console.log(isimler[2]);
 ```
 
-![Untitled](Notes/Untitled%205.png)
+![Untitled](Notes/img/Untitled%205.png)
 
 ```jsx
 let fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -195,7 +195,7 @@ fruits.splice(2, 1, "Lemon", "Kiwi");
 console.log(fruits.toString());
 ```
 
-![Untitled](Notes/Untitled%206.png)
+![Untitled](Notes/img/Untitled%206.png)
 
 ```jsx
 let fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -206,7 +206,7 @@ fruits.splice(2, 0, "Lemon", "Kiwi");
 console.log(fruits.toString());
 ```
 
-![Untitled](Notes/Untitled%207.png)
+![Untitled](Notes/img/Untitled%207.png)
 
 ```jsx
 let fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
@@ -217,7 +217,7 @@ fruits.splice(2, 2);
 console.log(fruits.toString());
 ```
 
-![Untitled](Notes/Untitled%208.png)
+![Untitled](Notes/img/Untitled%208.png)
 
 ```jsx
 //The concat() method concatenates (joins) two or more arrays
@@ -232,7 +232,7 @@ console.log(arr2.toString());
 console.log(children.toString());
 ```
 
-![Untitled](Notes/Untitled%209.png)
+![Untitled](Notes/img/Untitled%209.png)
 
 ```jsx
 //Array.slice() returns selected array elements as a new array
@@ -243,7 +243,7 @@ console.log(fruits.toString());
 console.log(citrus.toString());
 ```
 
-![Untitled](Notes/Untitled%2010.png)
+![Untitled](Notes/img/Untitled%2010.png)
 
 
 </details>

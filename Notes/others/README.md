@@ -76,3 +76,22 @@ catch (err) {
 ![Untitled](Untitled%203.png)
 
 ---
+
+<aside>
+📌 Javascript’te fonksiyon dışındaki bir değişkeni fonksiyon içinde kullanabiliriz. Fakat fonksiyon içinde de aynı isimde değişken tanımlarsak artık o sadece fonksiyon içinde yaşar…
+
+</aside>
+
+---
+
+# Local and Session Storage
+
+![Untitled](Untitled%204.png)
+
+---
+
+### this
+
+![Untitled](Untitled%205.png)
+
+---
