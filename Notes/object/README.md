@@ -242,6 +242,7 @@ const serkan = new Ogrenci('Serkan','ISIK',23);
 ---
 
 <aside>
+
 📌 Javascript 'deki tüm objeler onu oluşturan constructor fonksiyonun tanımına
 erişebilir.
 
@@ -265,6 +266,7 @@ console.log(serkan.constructor);
 ![Untitled](Untitled%2012.png)
 
 <aside>
+
 📌 Array ve Fuction ‘lar da birer object ’dir. Onlar da kurucu constructor ‘larına erişebilirler.
 
 </aside>
@@ -373,16 +375,19 @@ console.log(secondFunction);
 # Prototype Property
 
 <aside>
+
 📌 JS prototyoe miras modelini kullanır.
 
 </aside>
 
 <aside>
+
 📌 Her constructor function/class ayrı kurucu fonksiyonlar oluşturulan instance’ların ortak olarak kullanabilecekleri prototype isimli property ‘e sahiptir.
 
 </aside>
 
 <aside>
+
 📌 Prototype property de bir nesne döndürür.
 
 </aside>
@@ -473,6 +478,7 @@ console.log(serkan.bilgileriGoster());
 ![Untitled](Untitled%2018.png)
 
 <aside>
+
 💡 Prototype property sayesinde her instance için ayrı ayrı ‘ISIK’ argümanı yazılmak zorunda kalınmadı.
 
 </aside>
@@ -675,6 +681,7 @@ console.log(durdu.age.toString());
 ---
 
 <aside>
+
 ❓ toString yeniden tanımlansa da durdu.age.toString(); için toString ‘in default sonucu geldi…
 
 </aside>
