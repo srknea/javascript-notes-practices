@@ -243,6 +243,12 @@ const serkan = new Ogrenci('Serkan','ISIK',23);
 
 <aside>
 
+📌 Her Object ’in bir constructor ‘ı vardır.
+
+</aside>
+
+<aside>
+
 📌 Javascript 'deki tüm objeler onu oluşturan constructor fonksiyonun tanımına
 erişebilir.
 
@@ -711,3 +717,59 @@ console.log(durdu.age.toString());
 ![Untitled](Untitled%2028.png)
 
 ---
+
+### Wrapper Objects (Sarmalayıcı Objeler)
+
+```jsx
+const firstName = "Serkan";
+console.log(typeof firstName);
+console.log(firstName instanceof Object);
+
+console.log("----------");
+
+console.log(firstName.toUpperCase());
+console.log(typeof firstName);
+console.log(firstName instanceof Object);
+
+/* toUpperCase() Object 'lere özgü bir yapı olmasına
+ragmen primitive bir yapı olan firstName toUpperCase() 'i 
+nasıl kullandı ? */
+
+console.log("----------");
+
+console.log(firstName.constructor);
+//Her bir Object 'in constructor 'ı vardır.
+/* firstName primitive bir yapı ise nasıl constructor'u var ? */
+
+console.log("----------");
+
+console.log(firstName.constructor.prototype);
+/* firstName primitive bir yapı ise Object'lere ait şeylere nasıl sahip oluyor ?*/
+
+/*
+Açıklama:
+Javascript primitive bir değişken oluşturulduğunda onları kapsayıcı bir 
+değişken içine alır.
+
+Yani firstName toUpperCase() gibi değişkenleri kullanabilsin diye
+Javascript firstName değişkenini String isimle Object'in içine alıyor.
+
+firstName Object gibi davranmış oluyor fakat hala string halde kalıyor.
+*/
+
+console.log("***********");
+
+//bir string 'i kalıcı olarak Object hale getirelim...
+const color = new String('Black');
+console.log(typeof color);
+
+console.log("----------");
+
+//bir string 'i kalıcı olarak Object hale getirelim...
+const age = new Number(23);
+console.log(typeof age);
+```
+
+![Untitled](Untitled%2029.png)
+
+![Untitled](Untitled%2030.png)
