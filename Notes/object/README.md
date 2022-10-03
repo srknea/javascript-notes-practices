@@ -718,7 +718,7 @@ console.log(durdu.age.toString());
 
 ---
 
-### Wrapper Objects (Sarmalayıcı Objeler)
+# Wrapper Objects (Sarmalayıcı Objeler)
 
 ```jsx
 const firstName = "Serkan";
@@ -773,3 +773,300 @@ console.log(typeof age);
 ![Untitled](Untitled%2029.png)
 
 ![Untitled](Untitled%2030.png)
+
+# Kalıtım
+
+```jsx
+function Person (ad, soyad){
+    this.ad = ad;
+    this.soyad = soyad;
+}
+
+Person.prototype.selamVer = function(){
+    return `Merhaba ben ${this.ad} ${this.soyad}`;
+}
+
+const emre = new Person('Emre', 'Altunbilek');
+const hasan = new Person('Hasan', 'Yılmaz');
+
+console.log(emre.selamVer());
+console.log(hasan.selamVer());
+
+function Ogrenci(ad, soyad, no){
+    this.ad = ad;
+    this.soyad = soyad;
+    this.no = no;
+}
+
+Ogrenci.prototype.selamVer = function(){
+    return `Merhaba ben ${this.no} numaralı öğrenci ${this.ad} ${this.soyad}`;
+}
+
+const serkan = new Ogrenci('Serkan','IŞIK', 1810206031);
+
+console.log(serkan.selamVer());
+```
+
+![Untitled](Untitled%2031.png)
+
+```jsx
+function Person (ad, soyad){
+    this.ad = ad;
+    this.soyad = soyad;
+}
+
+Person.prototype.selamVer = function(){
+    return `Merhaba ben ${this.ad} ${this.soyad}`;
+}
+
+const emre = new Person('Emre', 'Altunbilek');
+const hasan = new Person('Hasan', 'Yılmaz');
+
+console.log(emre.selamVer());
+console.log(hasan.selamVer());
+
+function Ogrenci(ad, soyad, no){
+    Person.call(this, ad, soyad);
+    this.no = no;
+}
+
+Ogrenci.prototype.selamVer = function(){
+    return `Merhaba ben ${this.no} numaralı öğrenci ${this.ad} ${this.soyad}`;
+}
+
+const serkan = new Ogrenci('Serkan','IŞIK', 1810206031);
+
+console.log(serkan.selamVer());
+```
+
+![Untitled](Untitled%2031.png)
+
+```jsx
+function Person (ad, soyad){
+    this.ad = ad;
+    this.soyad = soyad;
+}
+
+Person.prototype.selamVer = function(){
+    return `Merhaba ben ${this.ad} ${this.soyad}`;
+}
+
+const emre = new Person('Emre', 'Altunbilek');
+const hasan = new Person('Hasan', 'Yılmaz');
+
+console.log(emre.selamVer());
+console.log(hasan.selamVer());
+
+function Ogrenci(ad, soyad, no){
+    Person.call(this, ad, soyad);
+    this.no = no;
+}
+
+Ogrenci.prototype = Object.create(Person.prototype);
+
+/*Prototype ‘ların nesne döndürdüğünü biliyoruz Ogrenci.prototype'ın döndereceği 
+nesne artık Person.prototype olacak*/
+
+/*
+Ogrenci.prototype.selamVer = function(){
+    return `Merhaba ben ${this.no} numaralı öğrenci ${this.ad} ${this.soyad}`;
+}
+*/
+
+const serkan = new Ogrenci('Serkan','IŞIK', 1810206031);
+
+console.log(serkan.selamVer());
+console.log(serkan.no);
+```
+
+![Untitled](Untitled%2032.png)
+
+```jsx
+function Person (ad, soyad){
+    this.ad = ad;
+    this.soyad = soyad;
+}
+
+Person.prototype.selamVer = function(){
+    return `Merhaba ben ${this.ad} ${this.soyad}`;
+}
+
+const emre = new Person('Emre', 'Altunbilek');
+const hasan = new Person('Hasan', 'Yılmaz');
+
+console.log(emre.selamVer());
+console.log(hasan.selamVer());
+
+function Ogrenci(ad, soyad, no){
+    Person.call(this, ad, soyad);
+    this.no = no;
+}
+
+Ogrenci.prototype = Object.create(Person.prototype);
+
+//overwrite yapılabilir
+Ogrenci.prototype.selamVer = function(){
+    return `Merhaba ben ${this.no} numaralı öğrenci ${this.ad} ${this.soyad}`;
+}
+
+const serkan = new Ogrenci('Serkan','IŞIK', 1810206031);
+
+console.log(serkan.selamVer());
+console.log(serkan.no);
+```
+
+![Untitled](Untitled%2033.png)
+
+```jsx
+function Person (ad, soyad){
+    this.ad = ad;
+    this.soyad = soyad;
+}
+
+Person.prototype.selamVer = function(){
+    return `Merhaba ben ${this.ad} ${this.soyad}`;
+}
+
+const emre = new Person('Emre', 'Altunbilek');
+const hasan = new Person('Hasan', 'Yılmaz');
+
+console.log(emre.selamVer());
+console.log(hasan.selamVer());
+
+function Ogrenci(ad, soyad, no){
+    Person.call(this, ad, soyad);
+    this.no = no;
+}
+
+Ogrenci.prototype = Object.create(Person.prototype);
+
+//overwrite yapılabilir
+Ogrenci.prototype.selamVer = function(){
+    return `Merhaba ben ${this.no} numaralı öğrenci ${this.ad} ${this.soyad}`;
+}
+
+Ogrenci.prototype.numaraSoyle = function(){
+    return `Benim okul numaram ${this.no}`;
+}
+
+const serkan = new Ogrenci('Serkan','IŞIK', 1810206031);
+
+console.log(serkan.selamVer());
+console.log(serkan.numaraSoyle());
+```
+
+![Untitled](Untitled%2034.png)
+
+---
+
+### Array’den Kalıtım Yapma
+
+```jsx
+function MyArray(){
+
+}
+
+const myArray = new MyArray();
+
+console.log(myArray);
+```
+
+![Untitled](Untitled%2035.png)
+
+```jsx
+function MyArray(){
+
+}
+
+MyArray.prototype = Object.create(Array.prototype);
+
+const arr = new MyArray();
+
+console.log(arr);
+```
+
+![Untitled](Untitled%2036.png)
+
+```jsx
+function MyArray(){
+
+}
+
+MyArray.prototype = Object.create(Array.prototype);
+
+const arr = new MyArray();
+
+arr.push(17);
+arr.push('Serkan');
+arr.push(true);
+
+console.log(arr);
+```
+
+![Untitled](Untitled%2037.png)
+
+### Keni Oluşturduğumuz map fonksiyonunu Array yapısına ekleme
+
+```jsx
+//map
+const myArray = [1, 2, 3, 4, 5];
+
+const newArray = myArray.map(function (value) {
+    return value * 2; //return is mandatory
+		//value: dizinin mevcut indisindeki değeri temsil eder    
+});
+
+console.log(newArray);
+
+console.log("----------");
+
+//kendimize ait map
+function myMap (array, callBack) {
+    const tempArray = [];
+    for (let i = 0; i < array.length; i++) {
+        tempArray.push(callBack(array[i]))     
+    }
+    return tempArray;
+}
+ 
+const secondNewArray = myMap(myArray, function myCallBack(value){
+    return value * 2;
+});
+
+console.log(secondNewArray);
+```
+
+![Untitled](Untitled%2038.png)
+
+```jsx
+Array.prototype.myMap = function  (callBack) {
+    const tempArray = [];
+    /* this.length --> O an bu fonksiyonu çağıran dizinin boyutu*/
+    for (let i = 0; i < this.length; i++) {
+        tempArray.push(callBack(this[i]))     
+    }
+    return tempArray;
+}
+
+const myArray = [1, 2, 3, 4, 5];
+
+const newArray = myArray.myMap(function (value) {
+    return value * 2; 
+});
+
+console.log(newArray);
+
+const secondNewArray = myArray.map(function (value) {
+    return value * 2; 
+});
+
+console.log(secondNewArray);
+```
+
+![Untitled](Untitled%2039.png)
+
+<aside>
+
+💡 myMap artık bütün Array ‘ler tarafından kullanılabilir. Çünkü bu yapı artık bütün Array ‘lere ait.
+
+</aside>
