@@ -257,4 +257,6 @@ console.log(citrus.toString());
 
 [Array Helper Functions](Notes/arrayHelperFunctions/README.md)
 
+[ES6 Class](Notes/es6Class/README.md)
+
 [Others](Notes/others/README.md)
