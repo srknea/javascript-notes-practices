@@ -13,6 +13,13 @@
 </aside>
 
 ```jsx
+//JS object oriented bir dildir ama bu onun Java, C# gibi oldugu anlamına gelmez
+//OOP bir aile ise, class based onun bir parçasıdır diyebiliriz. protype-base gibi.
+
+//Javascript is a multi-paradigm language that supports procedural, object-oriented (prototype-based) and functional programming styles.
+```
+
+```jsx
 class Person{
     constructor(ad, soyad){
         this.ad = ad;
@@ -29,6 +36,11 @@ const hasan = new Person('Hasan', 'Yılmaz');
 
 console.log(emre.selamVer());
 console.log(hasan.selamVer());
+
+/* 
+İşin özünde yine bir Person nesnesi oluşturduk. class vb. farklı bir 
+şey oluşturmadık
+*/
 ```
 
 ![Untitled](Untitled.png)
@@ -137,3 +149,57 @@ Person.test();
 ```
 
 ![Untitled](Untitled%204.png)
+
+---
+
+### Encapsulation in JavaScript
+
+```jsx
+class Person{
+    constructor(ad, soyad){
+        this.ad = ad;
+        this._soyad = soyad;
+    }
+
+    get soyadGet(){
+        return this._soyad;
+    }
+
+    set soyadSet(yeniDeger){
+        this._soyad = yeniDeger;
+    }
+
+    selamVer(){
+        return `Merhaba ben ${this.ad + " " + this.soyad}`;
+    }
+}
+
+class Ogrenci extends Person{
+    constructor(ad, soyad, no){
+        super(ad, soyad); //Ogrenci 'y ioluşturduğumuz class 'ı çağırdık
+        this.no = no;
+    }
+}
+
+const emre = new Person('Emre', 'Altunbilek');
+const hasan = new Person('Hasan', 'Yılmaz');
+
+const serkan = new Ogrenci('Serkan', 'IŞIK', 1810206031);
+
+console.log(emre._soyad);
+/*
+kapsülleme yapabilsek de JavaScript ilgili değişkenleri privite
+yapmaz. Zaten prive olsaydı 
+emre._soyad 
+diyerek erişemezdik.
+
+JavaScript'de kapsulleme koda bakan kişiye bilgi verir, privite yapmaz.
+*/
+
+console.log(emre.soyadGet);
+
+emre.soyadSet = "Altun";
+console.log(emre._soyad);
+```
+
+![Untitled](Untitled%205.png)
