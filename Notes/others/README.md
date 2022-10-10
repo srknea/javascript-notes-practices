@@ -135,3 +135,54 @@ console.log(typeof dizim);
 ```
 
 ![Untitled](Untitled%208.png)
+
+---
+
+```jsx
+let a = 1;
+if(a){
+    console.log("True", a);
+}else{
+    console.log("False", a);
+}
+
+let b = 0;
+if(b){
+    console.log("True", b);
+}else{
+    console.log("False", b);
+}
+
+let c = -1;
+if(c){
+    console.log("True", c);
+}else{
+    console.log("False", c);
+}
+
+let d;
+if(d){
+    console.log("True", d);
+}else{
+    console.log("False", d);
+}
+```
+
+![Untitled](Untitled%209.png)
+
+---
+
+```jsx
+/*
+    setTimeOut  ve  setInterval fonksiyonları verilen süreye göre çalışır. 
+    Örneğin 2 saniye verilsin...
+    
+    setTimeOut -> 2 saniye sonra ilgili kodu çalıştırır.
+    setInterval -> 2 saniyede bir ilgili kodu çalıştırır.
+*/
+
+/*
+document.querySelector , setTimeOut , setInternal browser 'ın sağladığı ozelliklerdir
+JavaScript 'e özgü değillerdir
+*/
+```
