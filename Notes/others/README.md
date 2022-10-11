@@ -44,7 +44,7 @@ for (let anlıkDiziElemani of arabaMarkalari) {
 }
 ```
 
-![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled.png)
+![Untitled](Untitled.png)
 
 ```jsx
 let serkan = {
@@ -58,7 +58,7 @@ for (const key in serkan) {
 }
 ```
 
-![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%201.png)
+![Untitled](Untitled%201.png)
 
 ```jsx
 let serkan = {
@@ -72,7 +72,7 @@ for (const key in serkan) {
 }
 ```
 
-![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%202.png)
+![Untitled](Untitled%202.png)
 
 ---
 
@@ -97,11 +97,11 @@ catch (err) {
 }
 ```
 
-![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%203.png)
+![Untitled](Untitled%203.png)
 
-![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%204.png)
+![Untitled](Untitled%204.png)
 
-![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%205.png)
+![Untitled](Untitled%205.png)
 
 ---
 
@@ -114,13 +114,13 @@ catch (err) {
 
 # Local and Session Storage
 
-![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%206.png)
+![Untitled](Untitled%206.png)
 
 ---
 
 ### this
 
-![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%207.png)
+![Untitled](Untitled%207.png)
 
 ---
 
@@ -134,7 +134,7 @@ console.log(dizim);
 console.log(typeof dizim);
 ```
 
-![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%208.png)
+![Untitled](Untitled%208.png)
 
 ---
 
@@ -168,7 +168,7 @@ if(d){
 }
 ```
 
-![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%209.png)
+![Untitled](Untitled%209.png)
 
 ---
 
@@ -200,6 +200,6 @@ let quotation =
 console.log(quotation);
 ```
 
-![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%2010.png)
+![Untitled](Untitled%2010.png)
 
 ---
