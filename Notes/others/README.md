@@ -44,7 +44,7 @@ for (let anlıkDiziElemani of arabaMarkalari) {
 }
 ```
 
-![Untitled](Untitled.png)
+![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled.png)
 
 ```jsx
 let serkan = {
@@ -58,7 +58,7 @@ for (const key in serkan) {
 }
 ```
 
-![Untitled](Untitled%201.png)
+![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%201.png)
 
 ```jsx
 let serkan = {
@@ -72,7 +72,7 @@ for (const key in serkan) {
 }
 ```
 
-![Untitled](Untitled%202.png)
+![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%202.png)
 
 ---
 
@@ -97,11 +97,11 @@ catch (err) {
 }
 ```
 
-![Untitled](Untitled%203.png)
+![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%203.png)
 
-![Untitled](Untitled%204.png)
+![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%204.png)
 
-![Untitled](Untitled%205.png)
+![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%205.png)
 
 ---
 
@@ -114,13 +114,13 @@ catch (err) {
 
 # Local and Session Storage
 
-![Untitled](Untitled%206.png)
+![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%206.png)
 
 ---
 
 ### this
 
-![Untitled](Untitled%207.png)
+![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%207.png)
 
 ---
 
@@ -134,7 +134,7 @@ console.log(dizim);
 console.log(typeof dizim);
 ```
 
-![Untitled](Untitled%208.png)
+![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%208.png)
 
 ---
 
@@ -168,7 +168,7 @@ if(d){
 }
 ```
 
-![Untitled](Untitled%209.png)
+![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%209.png)
 
 ---
 
@@ -186,3 +186,20 @@ document.querySelector , setTimeOut , setInternal browser 'ın sağladığı oze
 JavaScript 'e özgü değillerdir
 */
 ```
+
+---
+
+### String Escape
+
+[https://onlinestringtools.com/escape-string](https://onlinestringtools.com/escape-string)
+
+```jsx
+let quotation = 
+"\"The blazing fire makes flames and brightness out of everything thrown into it.\"";
+
+console.log(quotation);
+```
+
+![Untitled](Others%2039808539956e412b8075e8708abdea1a/Untitled%2010.png)
+
+---
